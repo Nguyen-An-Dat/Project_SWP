@@ -89,7 +89,7 @@ public class AddToCartServlet extends HttpServlet {
             total += productCart.getQuality() * productCart.getProductPrice();
             size += productCart.getQuality();
         }
-
+//hjdhfuhdfu
         session.setAttribute("countCar", size);
         session.setAttribute("cart", cart);
         session.setAttribute("total", total);
