@@ -109,7 +109,7 @@
                                                         <c:if test="${sessionScope.roleAccount != null}">
                                                             <c:if test="${sessionScope.roleAccount!=3}">
                                                                 <div class="product-action-vertical">
-                                                                    <a href="deleteProduct?productId=${p.productId}" class="btn-product-icon btn-expandable"><span>Delete</span></a>
+                                                                    <a href="deleteProduct?productId=${p.productId}"onclick="return confirm('bạn có muốn xóa sản phẩm không?');" class="btn-product-icon btn-expandable"><span>Delete</span></a>
                                                                     <a href="update?productId=${p.productId}" class="btn-product-icon btn-compare btn-expandable" title="Add Info"><span>Update</span></a>
 
                                                                 </div><!-- End .product-action-vertical -->

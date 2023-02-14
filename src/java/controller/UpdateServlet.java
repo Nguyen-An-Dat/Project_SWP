@@ -4,6 +4,7 @@
  */
 package controller;
 
+import dal.DAOCategory;
 import dal.DAOProduct;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +13,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.List;
+import model.Category;
 import model.Product;
 
 /**
@@ -38,7 +41,8 @@ public class UpdateServlet extends HttpServlet {
             String id_raw = request.getParameter("productId");
             int productId;
             DAOProduct d = new DAOProduct();
-            
+            DAOCategory DaoCate =  new DAOCategory();
+            List<Category>  listCate = DaoCate.getAll();
             productId = Integer.parseInt(id_raw);
             Product p = d.getProductById(productId);
             request.setAttribute("Product", p);
