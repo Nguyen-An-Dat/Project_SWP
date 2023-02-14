@@ -80,17 +80,17 @@ public class ChangeServlet extends HttpServlet {
         String username = (String) session.getAttribute("account");
         String oldPassSS = (String) session.getAttribute("oldPass");
         DAOAccount d = new DAOAccount();
-        if (oldPassword.contains(oldPassSS)) {
-            if (newPassword.contains(confirmPassword)) {
-                d.change(username, newPassword);
-            } else {
-
-            }
+        if (newPassword.length() < 8) {
+            request.getRequestDispatcher("changepass.jsp").forward(request, response);
         } else {
-
+            if (oldPassword.contains(oldPassSS)) {
+                if (newPassword.contains(confirmPassword)) {
+                    d.change(username, newPassword);
+                } 
+            } 
+            response.sendRedirect("home");
         }
-
-        response.sendRedirect("home");
+        
     }
 
     /**

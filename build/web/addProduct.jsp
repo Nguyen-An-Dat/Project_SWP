@@ -64,11 +64,11 @@
                 <div class="itemAdd">
                     <label> Enter CategoryId:</label>
                     <select name="categoryId" class="inputItemAdd">
-                        <option value="Hatchback"> Hatchback</option>
-                        <option value="Sedan"> Sedan</option>
-                        <option value="CUV-Crossover Utility Vehicle"> CUV-Crossover Utility Vehicle</option>
-                        <option value="SUV-Sport Utility Vehicle"> SUV-Sport Utility Vehicle</option>
-                        <option value="Limousine"> Limousine</option>
+                        <option value="1"> Hatchback</option>
+                        <option value="2"> Sedan</option>
+                        <option value="3"> CUV-Crossover Utility Vehicle</option>
+                        <option value="4"> SUV-Sport Utility Vehicle</option>
+                        <option value="5"> Limousine</option>
                     </select><br/>
                 </div>
                 <div class="itemAdd">
