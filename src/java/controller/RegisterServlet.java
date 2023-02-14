@@ -70,6 +70,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+        // Nhap taikhoan va matkhau.
         String username=request.getParameter("username");
         String password=request.getParameter("password");
         DAOAccount d = new DAOAccount();
@@ -77,7 +78,7 @@ public class RegisterServlet extends HttpServlet {
             d.insert(username, password);
             HttpSession session=request.getSession();
             session.setAttribute("account", username);
-            //dua nguoi dung sang trang home
+            //Sang trang home.
             response.sendRedirect("home");
         }else{
             request.setAttribute("ms", "account existed");
