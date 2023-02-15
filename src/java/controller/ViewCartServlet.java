@@ -33,7 +33,7 @@ public class ViewCartServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             response.sendRedirect("viewcart.jsp");
-        }
+        } //end viewcart
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
