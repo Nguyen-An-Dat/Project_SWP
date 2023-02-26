@@ -77,6 +77,9 @@ public class AddServlet extends HttpServlet {
         String productPrice = request.getParameter("productPrice");
         String categoryId = request.getParameter("categoryId");
         String image = request.getParameter("image");
+        String image2 = request.getParameter("image2");
+        String image3 = request.getParameter("image3");
+        String image4 = request.getParameter("image4");
         int productId;
         DAOProduct d = new DAOProduct();
         try {
@@ -89,7 +92,7 @@ public class AddServlet extends HttpServlet {
 //                request.getRequestDispatcher("addProduct.jsp").forward(request, response);
 //            }else{
             //chua ton tai
-            d.insert(new Product(1, Integer.parseInt(productPrice),Integer.parseInt(categoryId),productName,productColor,productDesc,image));
+            d.insert(new Product(1, Integer.parseInt(productPrice),Integer.parseInt(categoryId),productName,productColor,productDesc,image,image2,image3,image4));
             response.sendRedirect("listproduct");
             
         } catch (NumberFormatException e) {

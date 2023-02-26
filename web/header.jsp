@@ -135,7 +135,7 @@
                 </div><!-- End .header-search -->
 
                 <div class="dropdown cart-dropdown">
-                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                    <a href="/viewcart.jsp" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
                         <span class="cart-count">${sessionScope.countCar}</span>
                     </a>
@@ -174,8 +174,8 @@
                         </div><!-- End .dropdown-cart-total -->
 
                         <div class="dropdown-cart-action">
-                            <a href="viewcart" class="btn btn-primary">View Cart</a>
-                            <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+                            <a href="viewcart" class="btn btn-primary">List</a>
+                            <a href="checkout.html" class="btn btn-outline-primary-2"><span>Receive</span><i class="icon-long-arrow-right"></i></a>
                         </div><!-- End .dropdown-cart-total -->
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .cart-dropdown -->

@@ -31,7 +31,10 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"), 
+                        rs.getString("Image4")
                 );
                 list.add(c);
             }
@@ -104,7 +107,7 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"), rs.getString("Image2"), rs.getString("Image3"), rs.getString("Image4")
                 );
                 list.add(c);
             }
@@ -127,7 +130,10 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"),
+                        rs.getString("Image4")
                 );
                 return p;
             }
@@ -158,11 +164,11 @@ public class DAOProduct extends DBContext {
     }
 
     public List<Product> Sort(String selectValue) {
-         List<Product> list = new ArrayList<>();
+        List<Product> list = new ArrayList<>();
         String sql = "select * from products where productPrice <= ?";
         try {
             PreparedStatement st = connection.prepareStatement(sql);
-            st.setString(1, selectValue );
+            st.setString(1, selectValue);
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
                 Product c = new Product(rs.getInt("productId"),
@@ -171,7 +177,10 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"),
+                        rs.getString("Image4")
                 );
                 list.add(c);
             }
