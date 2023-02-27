@@ -121,7 +121,7 @@
                                     </div> End .details-filter-row -->
 
                                     <div class="product-details-action">
-                                        <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>add to cart</span></a>
+                                        <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>Add to list</span></a>
                                     </div><!-- End .product-details-action -->
 
                                     <div class="product-details-footer">
