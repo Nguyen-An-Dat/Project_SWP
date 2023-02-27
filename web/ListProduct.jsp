@@ -117,7 +117,7 @@
                                                         </c:if>
 
                                                         <div class="product-action">
-                                                            <a href="#" onclick="addToCart(${p.productId});" class="btn-product btn-cart"><span>add to cart</span></a>
+                                                            <a href="#" onclick="addToCart(${p.productId});" class="btn-product btn-cart"><span>add to List</span></a>
                                                         </div><!-- End .product-action -->
                                                     </figure><!-- End .product-media -->
 
