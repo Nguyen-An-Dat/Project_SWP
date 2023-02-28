@@ -31,8 +31,12 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"), 
+                        rs.getString("Image4")
                 );
+
                 list.add(c);
             }
         } catch (SQLException e) {
@@ -104,8 +108,12 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"), 
+                        rs.getString("Image4")
                 );
+
                 list.add(c);
             }
         } catch (SQLException e) {
@@ -121,15 +129,19 @@ public class DAOProduct extends DBContext {
             st.setInt(1, id);
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
-                Product p = new Product(rs.getInt("productId"),
+                Product c = new Product(rs.getInt("productId"),
                         rs.getInt("productPrice"),
                         rs.getInt("categoryId"),
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"), 
+                        rs.getString("Image4")
                 );
-                return p;
+
+                return c;
             }
         } catch (SQLException e) {
             System.out.println(e);
@@ -171,8 +183,12 @@ public class DAOProduct extends DBContext {
                         rs.getString("productName"),
                         rs.getString("productColor"),
                         rs.getString("productDescription"),
-                        rs.getString("Image")
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"), 
+                        rs.getString("Image4")
                 );
+
                 list.add(c);
             }
         } catch (SQLException e) {

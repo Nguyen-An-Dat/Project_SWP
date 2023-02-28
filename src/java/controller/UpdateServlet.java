@@ -84,6 +84,10 @@ public class UpdateServlet extends HttpServlet {
         String productPrice = request.getParameter("productPrice");
         String categoryId = request.getParameter("categoryId");
         String image = request.getParameter("image");
+        String image2 = request.getParameter("image2");
+        String image3 = request.getParameter("image3");
+        String image4 = request.getParameter("image4");
+
         int productId;
         DAOProduct d = new DAOProduct();
 
@@ -95,7 +99,8 @@ public class UpdateServlet extends HttpServlet {
                      productName,
                      productColor,
                      productDesc,
-                     image);
+                     image,image2,image3,image4);
+
             d.update(c);
             response.sendRedirect("listproduct");
         } catch (NumberFormatException e) {

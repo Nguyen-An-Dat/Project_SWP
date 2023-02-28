@@ -36,7 +36,11 @@
         <!-- Main CSS File -->
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/cart.js" type="text/javascript"></script>
+        <script src="assets/js/changeImage.js"></script>
         <script type="text/javascript">
+             function change123(src) {
+    document.getElementById("product-zoom").src = src;
+}
         </script>  
 
     </head>
@@ -61,8 +65,8 @@
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
                                         <figure class="product-main-image">
-                                            <img id="product-zoom" src=${product.image} data-zoom-image="assets/images/products/single/1-big.jpg" alt="product image">
-
+                                            <img id="product-zoom" src=${product.image}  data-zoom-image="assets/images/products/single/1-big.jpg" alt="product image">
+                                            
                                             <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                 <i class="icon-arrows"></i>
                                             </a>
@@ -73,8 +77,8 @@
                                                 <img src=${product.image} alt="product side">
                                             </a>
 
-                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/2.jpg" data-zoom-image="assets/images/products/single/2-big.jpg">
-                                                <img src=${product.image2} alt="product cross">
+                                                <a class="product-gallery-item"  onclick="change123(${product.image2})" data-image="assets/images/products/single/2.jpg" data-zoom-image="assets/images/products/single/2-big.jpg">
+                                                    <img src=${product.image2} onclick="change123(${product.image2})" alt="product cross">
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/products/single/3.jpg" data-zoom-image="assets/images/products/single/3-big.jpg">
@@ -195,6 +199,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <!-- Main JS File -->
         <script src="assets/js/main.js"></script>
+        
         <script src="assets/js/list-product.js" type="text/javascript"></script>
     </body>
 </html>
