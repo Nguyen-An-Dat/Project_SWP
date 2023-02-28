@@ -74,15 +74,15 @@
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/products/single/2.jpg" data-zoom-image="assets/images/products/single/2-big.jpg">
-                                                <img src=${product.image} alt="product cross">
+                                                <img src=${product.image2} alt="product cross">
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/products/single/3.jpg" data-zoom-image="assets/images/products/single/3-big.jpg">
-                                                <img src=${product.image} alt="product with model">
+                                                <img src=${product.image3} alt="product with model">
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/products/single/4.jpg" data-zoom-image="assets/images/products/single/4-big.jpg">
-                                                <img src=${product.image} alt="product back">
+                                                <img src=${product.image4} alt="product back">
                                             </a>
                                         </div><!-- End .product-image-gallery -->
                                     </div><!-- End .row -->
@@ -148,7 +148,8 @@
                             <div class="tab-pane fade show active" id="product-desc-tab" role="tabpanel" aria-labelledby="product-desc-link">
                                 <div class="product-desc-content">
                                     <h3>Product Information</h3>
-                                    <p>Mẫu xe gia đình KIA Carnival là tên gọi khác của Sedona tại Việt Nam. Kể từ năm 2022, hãng xe Hàn Quốc sẽ bán mẫu xe này với tên gọi duy nhất là KIA Carnival trên toàn cầu.  </p>
+                                    <p>${product.productDescription} </p>
+<!--                                    <p>Mẫu xe gia đình KIA Carnival là tên gọi khác của Sedona tại Việt Nam. Kể từ năm 2022, hãng xe Hàn Quốc sẽ bán mẫu xe này với tên gọi duy nhất là KIA Carnival trên toàn cầu.  </p>
                                     <ul>
                                         <li>7 túi khí . </li>
                                         <li>Hệ thống hỗ trợ phanh ABS, ESC, HAC .</li>
@@ -158,7 +159,7 @@
                                         <li>Camera toàn cảnh 360 .</li>
                                     </ul>
 
-                                    <p>Phần cản trước của xe có thiết kế theo phong cách SUV. Cụm cản phía trước dạng hình thang đối xứng, kết hợp với các chi tiết mạ bạc tạo hình ảnh cân đối, mạnh mẽ và cứng cáp. </p>
+                                    <p>Phần cản trước của xe có thiết kế theo phong cách SUV. Cụm cản phía trước dạng hình thang đối xứng, kết hợp với các chi tiết mạ bạc tạo hình ảnh cân đối, mạnh mẽ và cứng cáp. </p>-->
                                 </div><!-- End .product-desc-content -->
                             </div><!-- .End .tab-pane -->
                             <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">

@@ -163,8 +163,9 @@
                     </div>
 
                     <div class="buttonWrapper">
-                        <button type="submit" id="submitButton" onclick="validateSignupForm()" class="submitButton pure-button pure-button-primary">
-                            <span>Continue</span>
+                        <button type="submit" id="submitButton" onclick="validateSignupForm()" 
+                                class="submitButton pure-button pure-button-primary">
+                            <span >Continue</span>
                             <span id="loader"></span>
                         </button>
                     </div>
@@ -199,6 +200,28 @@
             } else {
                 confirm_password.setCustomValidity('');
                 return true;
+            }
+            alert("Password had changed!");
+        }
+        
+        function check
+        
+        
+        function checkPassword(){
+            console.log(password,confirm_password);
+            let message = document.getElementById("message");
+            
+            if(password.length != 0){
+                if(password == confirm_password){
+                   message.textContent = "Password match"; 
+                   message.style.backgroundcolor = "green";
+                } else {
+                    message.textContent = "Password don't match";
+                    message.style.backgroundcolor = "red";
+                }
+            } else {
+                alert("Password can't be empty!");
+                message.textContent = "";
             }
         }
 

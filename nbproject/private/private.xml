@@ -3,17 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/controller/UpdateServlet.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/dal/DAOProduct.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/web/login-register.jsp</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/controller/ChangeServlet.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/dal/DAOAccount.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/web/footer.jsp</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/web/header.jsp</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/model/Role.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/controller/SearchServlet.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/dal/DAOOrder.java</file>
-            <file>file:/D:/Download/FinalProject/FinalProject/src/java/controller/AddServlet.java</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/dal/DBContext.java</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/model/Product.java</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/ListProduct.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/viewcart.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/changepass.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/cardetail.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/controller/ChangeServlet.java</file>
         </group>
     </open-files>
 </project-private>
