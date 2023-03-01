@@ -141,7 +141,7 @@
         <jsp:include page="header.jsp" />
         <div class="mainDiv">
             <div class="cardStyle">
-                <form action="change" method="post" name="signupForm" id="signupForm">
+<!--                <form action="change" method="post" name="signupForm" id="signupForm">-->
 
                     <img src="" id="signupLogo"/>
 
@@ -163,13 +163,14 @@
                     </div>
 
                     <div class="buttonWrapper">
-                        <button type="submit" id="submitButton" onclick="validateSignupForm()" class="submitButton pure-button pure-button-primary">
-                            <span>Continue</span>
+                        <button type="submit" id="submitButton" onclick="changePass()" 
+                                class="submitButton pure-button pure-button-primary">
+                            <span >Continue</span>
                             <span id="loader"></span>
                         </button>
                     </div>
 
-                </form>
+<!--                </form>-->
             </div>
         </div>
         <jsp:include page="footer.jsp" />
@@ -184,11 +185,15 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <!-- Main JS File -->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/changepass.js"></script>
     </body>
     <script>
         var password = document.getElementById("newPassword")
                 , confirm_password = document.getElementById("confirmPassword");
-
+        var check888='<%=session.getAttribute("check888")%>';
+        
+        
+        
         document.getElementById('signupLogo').src = "https://s3-us-west-2.amazonaws.com/shipsy-public-assets/shipsy/SHIPSY_LOGO_BIRD_BLUE.png";
         enableSubmitButton();
 
@@ -200,7 +205,29 @@
                 confirm_password.setCustomValidity('');
                 return true;
             }
+            alert("Password had changed!");
         }
+        
+        function check
+        
+        
+//        function checkPassword(){
+//            console.log(password,confirm_password);
+//            let message = document.getElementById("message");
+//            
+//            if(password.length != 0){
+//                if(password == confirm_password){
+//                   message.textContent = "Password match"; 
+//                   message.style.backgroundcolor = "green";
+//                } else {
+//                    message.textContent = "Password don't match";
+//                    message.style.backgroundcolor = "red";
+//                }
+//            } else {
+//                alert("Password can't be empty!");
+//                message.textContent = "";
+//            }
+//        }
 
         password.onchange = validatePassword;
         confirm_password.onkeyup = validatePassword;
