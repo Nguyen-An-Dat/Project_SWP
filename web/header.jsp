@@ -19,16 +19,15 @@
                         <ul>
                             <li><a href="tel:#"><i class="icon-phone"></i>Call: 0383376171</a></li>
                             <li><a href="home">Contact Us</a></li>
-
                             <%
                                 String username = (String)session.getAttribute("account");
                                 if(username==null)  {
-                            %>            
+                            %>
                             <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login-Register</a></li>
                                 <%
                                     } else {
                                 %>
-                            <li><a href="home" class="icon-user"></i>${sessionScope.account}</a>
+                            <li><a href="<c:url value="/listcustomer"/>" class="icon-user"></i>List Customer</a>
                             <li><a href="changepass.jsp" class="icon-user">Change Password</a></li>
                             <li><a href="logout">Logout</a></li>
                                 <%
