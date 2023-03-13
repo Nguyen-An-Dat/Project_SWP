@@ -115,10 +115,12 @@
                                                                 </div><!-- End .product-action-vertical -->
                                                             </c:if>
                                                         </c:if>
-
-                                                        <div class="product-action">
+                                                            <c:if test="${sessionScope.roleAccount==3}">
+                                                                <div class="product-action">
                                                             <a href="#" onclick="addToCart(${p.productId});" class="btn-product btn-cart"><span>add to List</span></a>
                                                         </div><!-- End .product-action -->
+                                                            </c:if>
+                                                        
                                                     </figure><!-- End .product-media -->
 
                                                     <div class="product-body">
