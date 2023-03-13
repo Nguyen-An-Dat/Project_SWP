@@ -118,6 +118,8 @@ public class LoginServlet extends HttpServlet {
             Double total;
             total = 0.0;
             HttpSession session = request.getSession();
+//            session.setAttribute("account", a);
+//            session.setAttribute("accountUsername", a.getUsername());
             session.setAttribute("account", a.getUsername());
             session.setAttribute("cart", cart);
             session.setAttribute("total", total);
