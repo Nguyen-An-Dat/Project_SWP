@@ -73,19 +73,19 @@
                                         </figure><!-- End .product-main-image -->
 
                                         <div id="product-zoom-gallery" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/1.jpg" data-zoom-image="assets/images/products/single/1-big.jpg">
+                                            <a class="product-gallery-item active" href="#" data-image="${product.image}" data-zoom-image="${product.image}">
                                                 <img src=${product.image} alt="product side">
                                             </a>
 
-                                                <a class="product-gallery-item"  onclick="change123(${product.image2})" data-image="assets/images/products/single/2.jpg" data-zoom-image="assets/images/products/single/2-big.jpg">
+                                                <a class="product-gallery-item" href="#" data-image="${product.image2}" data-zoom-image="${product.image2}">
                                                     <img src=${product.image2} onclick="change123(${product.image2})" alt="product cross">
                                             </a>
 
-                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/3.jpg" data-zoom-image="assets/images/products/single/3-big.jpg">
+                                            <a class="product-gallery-item" href="#" data-image="${product.image3}" data-zoom-image="${product.image3}">
                                                 <img src=${product.image3} alt="product with model">
                                             </a>
 
-                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/4.jpg" data-zoom-image="assets/images/products/single/4-big.jpg">
+                                            <a class="product-gallery-item" href="#" data-image="${product.image4}" data-zoom-image="${product.image4}">
                                                 <img src=${product.image4} alt="product back">
                                             </a>
                                         </div><!-- End .product-image-gallery -->

@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/controller/ChangeServlet.java</file>
-            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/dal/DAOProduct.java</file>
-            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/controller/UpdateServlet.java</file>
-            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/cardetail.jsp</file>
-            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/ListProduct.jsp</file>
-            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/viewcart.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/controller/ContactInfoServlet.java</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/src/java/controller/ListCustomerSeverlet.java</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/Home.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/login-register.jsp</file>
+            <file>file:/D:/Fall_2022/PRJ301/ExFall2022/NewProject/demo/web/header.jsp</file>
         </group>
     </open-files>
 </project-private>
