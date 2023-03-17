@@ -28,7 +28,7 @@
                                 <%
                                     } else {
                                 %>
-                            <li><a href="home" class="icon-user"></i>${sessionScope.account}</a>
+                            <li><a href="listCustomer.jsp" class="icon-user"></i>${sessionScope.account}</a>
                             <li><a href="changepass.jsp" class="icon-user">Change Password</a></li>
                             <li><a href="logout">Logout</a></li>
                                 <%
@@ -41,7 +41,7 @@
         </div><!-- End .container -->
     </div><!-- End .header-top -->
 
-    <div class="header-middle sticky-header">
+    <div class="header-middle sticky-header" style="background-image: url(assets/images/menu/demos/head.jpg)">
         <div class="container">
             <div class="header-left">
                 <button class="mobile-menu-toggler">
@@ -56,7 +56,7 @@
                 <nav class="main-nav">
                     <ul class="menu sf-arrows">
                         <li class="megamenu-container active">
-                            <a href="listproduct" class="sf-with-ul">Car</a>
+                            <a href="listproduct" class="sf-with-ul" style="color: black">Car</a>
 
                             <div class="megamenu demo">
                                 <div class="menu-col">
