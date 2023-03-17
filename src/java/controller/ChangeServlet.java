@@ -80,17 +80,36 @@ public class ChangeServlet extends HttpServlet {
         String username = (String) session.getAttribute("account");
         String oldPassSS = (String) session.getAttribute("oldPass");
         DAOAccount d = new DAOAccount();
+
+//        if (oldPassword.contains(oldPassSS)) {
+//            if (newPassword.contains(confirmPassword)) {
+//                d.change(username, newPassword);
+//                response.getWriter().print("1");
+//            } else {
+//                response.getWriter().print("3");
+//            }
+//        }else if (newPassword.length() < 8) {
+//            response.getWriter().print("2");
+//        } else {
+//            response.getWriter().print("0");
+//        }
+
         if (newPassword.length() < 8) {
-            request.getRequestDispatcher("changepass.jsp").forward(request, response);
+            response.getWriter().print("2");
         } else {
             if (oldPassword.contains(oldPassSS)) {
                 if (newPassword.contains(confirmPassword)) {
                     d.change(username, newPassword);
-                } 
-            } 
-            response.sendRedirect("home");
+                    response.getWriter().print("1");
+                } else {
+                    response.getWriter().print("3");
+                }
+            } else {
+                response.getWriter().print("0");
+            }
+//            response.sendRedirect("home");
         }
-        
+
     }
 
     /**
