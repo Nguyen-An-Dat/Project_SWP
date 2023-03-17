@@ -17,7 +17,7 @@ import model.User;
 public class DAOAccount extends DBContext {
 
     public Account check(String username, String password) {
-        String sql = "select * from accounts where username=? and Password=?";
+        String sql = "select * from accounts where userName=? and password=?";
         try {
             PreparedStatement st = connection.prepareStatement(sql);
             st.setString(1, username);
