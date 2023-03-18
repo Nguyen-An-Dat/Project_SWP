@@ -43,198 +43,271 @@
 
             <jsp:include page="header.jsp" />
 
+
+
             <main class="main">
-                <div class="intro-section bg-lighter pt-5 pb-6">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="intro-slider-container slider-container-ratio slider-container-1 mb-2 mb-lg-0">
-                                    <div class="intro-slider intro-slider-1 owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{
-                                         "nav": false, 
-                                         "responsive": {
-                                         "768": {
-                                         "nav": true
-                                         }
-                                         }
-                                         }'>
-                                        <div class="intro-slide">
-                                            <figure class="slide-image">
-                                                <picture>
-                                                    <source media="(max-width: 480px)" srcset="assets/images/slider/slide-100.jpg">
-                                                    <img src="assets/images/slider/slider-100.jpg" alt="Image Desc">
-                                                </picture>
-                                            </figure><!-- End .slide-image -->
-                                        </div><!-- End .intro-slide -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="banner banner-big banner-overlay">
+                                <a href="#">
+                                    <img src="assets/images/kia1.jpg" alt="Banner">
+                                </a>
 
-                                        <div class="intro-slide">
-                                            <figure class="slide-image">
-                                                <picture>
-                                                    <source media="(max-width: 480px)" srcset="assets/images/slider/slide-200.jpg">
-                                                    <img src="assets/images/slider/slider-200.jpg" alt="Image Desc">
-                                                </picture>
-                                            </figure><!-- End .slide-image -->
 
-                                        </div><!-- End .intro-slide -->
+                            </div><!-- End .banner -->
+                        </div><!-- End .col-lg-6 -->
 
-                                        <div class="intro-slide">
-                                            <figure class="slide-image">
-                                                <picture>
-                                                    <source media="(max-width: 480px)" srcset="assets/images/slider/banner3.jpg">
-                                                    <img src="assets/images/slider/banner3.jpg" alt="Image Desc">
-                                                </picture>
-                                            </figure><!-- End .slide-image -->
-                                        </div><!-- End .intro-slide -->
-                                    </div><!-- End .intro-slider owl-carousel owl-simple -->
+                        <div class="col-lg-6">
+                            <div class="banner banner-big banner-overlay">
+                                <a href="#">
+                                    <img src="assets/images/kia.jpg" alt="Banner">
+                                </a>
 
-                                    <span class="slider-loader"></span><!-- End .slider-loader -->
-                                </div><!-- End .intro-slider-container -->
-                            </div><!-- End .col-lg-8 -->
-                            <div class="col-lg-4">
-                                <div class="intro-banners">
-                                    <div class="row row-sm">
-                                        <div class="col-md-6 col-lg-12">
-                                            <div class="banner banner-display">
-                                                <a href="listproduct">
-                                                    <img src="assets/images/banners/home/intro/c.jpg" alt="Banner">
-                                                </a>
 
-                                                <div class="banner-content">
-                                                    <h3 class="banner-title text-white"><a href="#">HOT <br>Up to 40% off</a></h3><!-- End .banner-title -->
-                                                </div><!-- End .banner-content -->
-                                            </div><!-- End .banner -->
-                                        </div><!-- End .col-md-6 col-lg-12 -->
+                            </div><!-- End .banner -->
+                        </div><!-- End .col-lg-6 -->
+                    </div><!-- End .row -->
 
-                                        <div class="col-md-6 col-lg-12">
-                                            <div class="banner banner-display mb-0">
-                                                <a href="listproduct">
-                                                    <img src="assets/images/banners/home/intro/banner-202.jpg" alt="Banner">
-                                                </a>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="banner banner-overlay text-white">
+                                <a href="#">
+                                    <img src="assets/images/kia3.jpg" alt="Banner">
+                                </a>
 
-                                                <div class="banner-content">
-                                                    <h4 class="banner-subtitle text-darkwhite"><a href="#">New in</a></h4><!-- End .banner-subtitle -->
-                                                </div><!-- End .banner-content -->
-                                            </div><!-- End .banner -->
-                                        </div><!-- End .col-md-6 col-lg-12 -->
-                                    </div><!-- End .row row-sm -->
-                                </div><!-- End .intro-banners -->
-                            </div><!-- End .col-lg-4 -->
-                        </div><!-- End .row -->
 
-                        <div class="mb-6"></div><!-- End .mb-6 -->
+                            </div><!-- End .banner -->
+                        </div><!-- End .col-lg-4 -->
 
-                        <div class="owl-carousel owl-simple" data-toggle="owl" 
-                             data-owl-options='{
-                             "nav": false, 
-                             "dots": false,
-                             "margin": 30,
-                             "loop": false,
-                             "responsive": {
-                             "0": {
-                             "items":2
-                             },
-                             "420": {
-                             "items":3
-                             },
-                             "600": {
-                             "items":4
-                             },
-                             "900": {
-                             "items":5
-                             },
-                             "1024": {
-                             "items":6
-                             }
-                             }
-                             }'>
-                            <a href="#" class="brand">
-                                <img src="assets/images/brands/1.png" alt="Brand Name">
-                            </a>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="banner banner-overlay color-grey">
+                                <a href="#">
+                                    <img src="assets/images/kia4.jpg" alt="Banner">
+                                </a>
 
-                            <a href="#" class="brand">
-                                <img src="assets/images/brands/2.png" alt="Brand Name">
-                            </a>
 
-                            <a href="#" class="brand">
-                                <img src="assets/images/brands/3.png" alt="Brand Name">
-                            </a>
+                            </div><!-- End .banner -->
+                        </div><!-- End .col-lg-4 -->
 
-                            <a href="#" class="brand">
-                                <img src="assets/images/brands/4.png" alt="Brand Name">
-                            </a>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="banner banner-overlay text-white">
+                                <a href="#">
+                                    <img src="assets/images/kia5.jpg" alt="Banner">
+                                </a>
 
-                            <a href="#" class="brand">
-                                <img src="assets/images/brands/5.png" alt="Brand Name">
-                            </a>
 
-                            <a href="#" class="brand">
-                                <img src="assets/images/brands/6.png" alt="Brand Name">
-                            </a>
-                        </div><!-- End .owl-carousel -->
-                    </div><!-- End .container -->
-                </div><!-- End .bg-lighter -->
+                            </div><!-- End .banner -->
+                        </div><!-- End .col-lg-4 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container-fluid -->
+
 
                 <div class="mb-6"></div><!-- End .mb-6 -->
 
-                <div class="mb-5"></div><!-- End .mb-6 -->
+                <div class="container-fluid">
 
-                <div class="container">
-                    <hr>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <i class="icon-rocket"></i>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Payment & Delivery</h3><!-- End .icon-box-title -->
-                                    <p>Free ship</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-lg-4 col-sm-6 -->
+                    <hr class="mt-0 mb-6">
 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <i class="icon-rotate-left"></i>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Return & Refund</h3><!-- End .icon-box-title -->
-                                    <p>Free 100% money back guarantee</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-lg-4 col-sm-6 -->
+                    <div class="blog-posts mb-4">
+                        <h2 class="title text-center mb-3">NEWS</h2><!-- End .title text-center -->
 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <i class="icon-life-ring"></i>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Quality Support</h3><!-- End .icon-box-title -->
-                                    <p>Alway online feedback 24/7</p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-lg-4 col-sm-6 -->
-                    </div><!-- End .row -->
+                        <div class="owl-carousel owl-simple mb-2" data-toggle="owl" 
+                             data-owl-options='{
+                             "nav": false, 
+                             "dots": true,
+                             "items": 3,
+                             "margin": 20,
+                             "loop": false,
+                             "responsive": {
+                             "0": {
+                             "items":1
+                             },
+                             "520": {
+                             "items":2
+                             },
+                             "768": {
+                             "items":3
+                             },
+                             "992": {
+                             "items":4
+                             }
+                             }
+                             }'>
+                            <article class="entry">
+                                <figure class="entry-media">
+                                    <a href="home">
+                                        <img src="assets/images/kia6.jpg" alt="image desc">
+                                    </a>
+                                </figure><!-- End .entry-media -->
 
-                    <div class="mb-2"></div><!-- End .mb-2 -->
-                </div><!-- End .container -->
+                                <div class="entry-body text-center">
 
-                <div class="cta cta-display bg-image pt-4 pb-4" style="background-image: url(assets/images/backgrounds/cta/bg-601.jpg);">
+
+                                    <h3 class="entry-title">
+                                        <a href="home">KIA K5 – LỰA CHỌN KHÁC BIỆT TRONG PHÂN KHÚC D-SEDAN</a>
+                                    </h3><!-- End .entry-title -->
+
+                                    <div class="entry-content">
+                                        <a href="home" class="read-more">Read More</a>
+                                    </div><!-- End .entry-content -->
+                                </div><!-- End .entry-body -->
+                            </article><!-- End .entry -->
+
+                            <article class="entry">
+                                <figure class="entry-media">
+                                    <a href="home">
+                                        <img src="assets/images/kia7.jpg" alt="image desc">
+                                    </a>
+                                </figure><!-- End .entry-media -->
+
+                                <div class="entry-body text-center">
+
+
+                                    <h3 class="entry-title">
+                                        <a href="home">KIA CARNIVAL: XE GIA ĐÌNH CỠ LỚN CHO NHỮNG TRẢI NGHIỆM SANG TRỌNG VÀ HIỆN ĐẠI.</a>
+                                    </h3><!-- End .entry-title -->
+
+                                    <div class="entry-content">
+                                        <a href="home" class="read-more">Read More</a>
+                                    </div><!-- End .entry-content -->
+                                </div><!-- End .entry-body -->
+                            </article><!-- End .entry -->
+
+                            <article class="entry">
+                                <figure class="entry-media">
+                                    <a href="home">
+                                        <img src="assets/images/kia8.jpg" alt="image desc">
+                                    </a>
+                                </figure><!-- End .entry-media -->
+
+                                <div class="entry-body text-center">
+
+
+                                    <h3 class="entry-title">
+                                        <a href="home">CÙNG KIA KẾT NỐI YÊU THƯƠNG – KHẲNG ĐỊNH PHONG CÁCH RIÊNG CÁ TÍNH</a>
+                                    </h3><!-- End .entry-title -->
+
+                                    <div class="entry-content">
+                                        <a href="home" class="read-more">Read More</a>
+                                    </div><!-- End .entry-content -->
+                                </div><!-- End .entry-body -->
+                            </article><!-- End .entry -->
+
+                            <article class="entry">
+                                <figure class="entry-media">
+                                    <a href="home">
+                                        <img src="assets/images/kia9.jpg" alt="image desc">
+                                    </a>
+                                </figure><!-- End .entry-media -->
+
+                                <div class="entry-body text-center">
+
+
+                                    <h3 class="entry-title">
+                                        <a href="home">KIA CONNECT LITE – NÂNG TẦM TRẢI NGHIỆM LÁI TRÊN CÁC DÒNG XE KIA</a>
+                                    </h3><!-- End .entry-title -->
+
+                                    <div class="entry-content">
+                                        <a href="home" class="read-more">Read More</a>
+                                    </div><!-- End .entry-content -->
+                                </div><!-- End .entry-body -->
+                            </article><!-- End .entry -->
+                        </div><!-- End .owl-carousel -->
+                    </div><!-- End .blog-posts -->
+                </div><!-- End .container-fluid -->
+
+                <div class="bg-light-2 pt-7 pb-6 testimonials">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-10 col-lg-9 col-xl-8">
-                                <div class="row no-gutters flex-column flex-sm-row align-items-sm-center">
-                                    <div class="col">
-                                        <h3 class="cta-title text-white">Sign Up & Gift Offer Hot</h3><!-- End .cta-title -->
-                                        <p class="cta-desc text-white">KIA Best of your choice</p><!-- End .cta-desc -->
-                                    </div><!-- End .col -->
-                                </div><!-- End .row no-gutters -->
-                            </div><!-- End .col-md-10 col-lg-9 -->
-                        </div><!-- End .row -->
+                        <h2 class="title text-center mb-2">Slogan</h2><!-- End .title text-center -->
+                        <div class="owl-carousel owl-simple owl-testimonials" data-toggle="owl" 
+                             data-owl-options='{
+                             "nav": false, 
+                             "dots": true,
+                             "margin": 20,
+                             "loop": false,
+                             "responsive": {
+                             "1200": {
+                             "nav": true
+                             }
+                             }
+                             }'>
+                            <blockquote class="testimonial testimonial-icon text-center">
+
+                                <p>“ Connect your driving dream - With the best quality and service ”</p>
+                            </blockquote><!-- End .testimonial -->
+
+                            <blockquote class="testimonial testimonial-icon text-center">
+
+                                <p>“ Start a new journey - Choose a good car, conquer all roads.”</p>
+                            </blockquote><!-- End .testimonial -->
+
+                            <blockquote class="testimonial testimonial-icon text-center">
+
+                                <p>“ Go anywhere with confidence and peace of mind - Choose our car now to experience! ”</p>
+                            </blockquote><!-- End .testimonial -->
+                        </div><!-- End .testimonials-slider owl-carousel -->
                     </div><!-- End .container -->
-                </div><!-- End .cta -->
+                </div><!-- End .bg-light pt-5 pb-5 -->
+
+                <div class="brands-border owl-carousel owl-simple" data-toggle="owl" 
+                     data-owl-options='{
+                     "nav": false, 
+                     "dots": false,
+                     "margin": 0,
+                     "loop": false,
+                     "responsive": {
+                     "0": {
+                     "items":2
+                     },
+                     "420": {
+                     "items":3
+                     },
+                     "600": {
+                     "items":4
+                     },
+                     "900": {
+                     "items":5
+                     },
+                     "1024": {
+                     "items":6
+                     },
+                     "1360": {
+                     "items":7
+                     }
+                     }
+                     }'>
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/1.png" alt="Brand Name">
+                    </a>
+
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/2.png" alt="Brand Name">
+                    </a>
+
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/3.png" alt="Brand Name">
+                    </a>
+
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/4.png" alt="Brand Name">
+                    </a>
+
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/5.png" alt="Brand Name">
+                    </a>
+
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/6.png" alt="Brand Name">
+                    </a>
+
+                    <a href="#" class="brand">
+                        <img src="assets/images/brands/7.png" alt="Brand Name">
+                    </a>
+                </div><!-- End .owl-carousel -->
             </main><!-- End .main -->
+
+
 
             <jsp:include page="footer.jsp" />
         </div><!-- End .page-wrapper -->
