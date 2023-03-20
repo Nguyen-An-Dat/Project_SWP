@@ -36,7 +36,11 @@
         <!-- Main CSS File -->
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/cart.js" type="text/javascript"></script>
+        <script src="assets/js/changeImage.js"></script>
         <script type="text/javascript">
+             function change123(src) {
+    document.getElementById("product-zoom").src = src;
+}
         </script>  
 
     </head>
@@ -47,7 +51,7 @@
                 <div class="container d-flex align-items-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="ListProduct.jsp">Car</a></li>
+                        <li class="breadcrumb-item"><a href="#">Car</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Details</li>
                     </ol>
                 </div><!-- End .container -->
@@ -61,28 +65,28 @@
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
                                         <figure class="product-main-image">
-                                            <img id="product-zoom" src="${product.image}"  data-zoom-image="${product.image}" alt="product image">
-
+                                            <img id="product-zoom" src=${product.image}  data-zoom-image="assets/images/products/single/1-big.jpg" alt="product image">
+                                            
                                             <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                 <i class="icon-arrows"></i>
                                             </a>
                                         </figure><!-- End .product-main-image -->
 
                                         <div id="product-zoom-gallery" class="product-image-gallery">
-                                            <a class="product-gallery-item active" href="#" data-image="${product.image}" data-zoom-image="${product.image}">
-                                                <img src="${product.image}" alt="product side">
+                                            <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/1.jpg" data-zoom-image="assets/images/products/single/1-big.jpg">
+                                                <img src=${product.image} alt="product side">
                                             </a>
 
-                                            <a class="product-gallery-item " href="#" data-image="${product.image2}" data-zoom-image="${product.image2}">
-                                                <img src="${product.image2}" alt="product cross">
+                                                <a class="product-gallery-item"  onclick="change123(${product.image2})" data-image="assets/images/products/single/2.jpg" data-zoom-image="assets/images/products/single/2-big.jpg">
+                                                    <img src=${product.image2} onclick="change123(${product.image2})" alt="product cross">
                                             </a>
 
-                                            <a class="product-gallery-item " href="#" data-image="${product.image3}" data-zoom-image="${product.image3}">
-                                                <img src="${product.image3}" alt="product with model">
+                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/3.jpg" data-zoom-image="assets/images/products/single/3-big.jpg">
+                                                <img src=${product.image3} alt="product with model">
                                             </a>
 
-                                            <a class="product-gallery-item " href="#" data-image="${product.image4}" data-zoom-image="${product.image4}">
-                                                <img src="${product.image4}" alt="product back">
+                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/4.jpg" data-zoom-image="assets/images/products/single/4-big.jpg">
+                                                <img src=${product.image4} alt="product back">
                                             </a>
                                         </div><!-- End .product-image-gallery -->
                                     </div><!-- End .row -->
@@ -119,12 +123,18 @@
                                             <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
                                         </div> End .product-details-quantity 
                                     </div> End .details-filter-row -->
+
 <c:if test="${sessionScope.account != null && sessionScope.roleAccount == 3}">
     <div class="product-details-action">
         <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>Add to list</span></a>
     </div><!-- End .product-details-action -->
 </c:if>    
-                                    
+
+
+                                    <div class="product-details-action">
+                                        <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    </div><!-- End .product-details-action -->
+
 
                                     <div class="product-details-footer">
                                         <div class="social-icons social-icons-sm">
@@ -150,7 +160,8 @@
                             <div class="tab-pane fade show active" id="product-desc-tab" role="tabpanel" aria-labelledby="product-desc-link">
                                 <div class="product-desc-content">
                                     <h3>Product Information</h3>
-                                    <p>Mẫu xe gia đình KIA Carnival là tên gọi khác của Sedona tại Việt Nam. Kể từ năm 2022, hãng xe Hàn Quốc sẽ bán mẫu xe này với tên gọi duy nhất là KIA Carnival trên toàn cầu.  </p>
+                                    <p>${product.productDescription} </p>
+<!--                                    <p>Mẫu xe gia đình KIA Carnival là tên gọi khác của Sedona tại Việt Nam. Kể từ năm 2022, hãng xe Hàn Quốc sẽ bán mẫu xe này với tên gọi duy nhất là KIA Carnival trên toàn cầu.  </p>
                                     <ul>
                                         <li>7 túi khí . </li>
                                         <li>Hệ thống hỗ trợ phanh ABS, ESC, HAC .</li>
@@ -160,7 +171,7 @@
                                         <li>Camera toàn cảnh 360 .</li>
                                     </ul>
 
-                                    <p>Phần cản trước của xe có thiết kế theo phong cách SUV. Cụm cản phía trước dạng hình thang đối xứng, kết hợp với các chi tiết mạ bạc tạo hình ảnh cân đối, mạnh mẽ và cứng cáp. </p>
+                                    <p>Phần cản trước của xe có thiết kế theo phong cách SUV. Cụm cản phía trước dạng hình thang đối xứng, kết hợp với các chi tiết mạ bạc tạo hình ảnh cân đối, mạnh mẽ và cứng cáp. </p>-->
                                 </div><!-- End .product-desc-content -->
                             </div><!-- .End .tab-pane -->
                             <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
@@ -196,6 +207,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <!-- Main JS File -->
         <script src="assets/js/main.js"></script>
+        
         <script src="assets/js/list-product.js" type="text/javascript"></script>
     </body>
 </html>
