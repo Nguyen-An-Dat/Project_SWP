@@ -108,6 +108,7 @@
                                 </table><!-- End .table table-wishlist -->
                             </div><!-- End .col-lg-9 -->
                             <aside class="col-lg-3">
+                                
                                 <div class="summary summary-cart">
                                     <h3 class="summary-title">List Total</h3><!-- End .summary-title -->
 
@@ -121,9 +122,9 @@
                                         </tbody>
                                     </table><!-- End .table table-summary -->
 
-                                    <a href="checkout" class="btn btn-outline-primary-2 btn-order btn-block">RECEIVE INFORMATION</a>
+                                    <a href="contactInfo.jsp" class="btn btn-outline-primary-2 btn-order btn-block">RECEIVE INFORMATION</a>
                                 </div><!-- End .summary -->
-
+                                
                                 <a href="listproduct" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE ADD lIST</span><i class="icon-refresh"></i></a>
                             </aside><!-- End .col-lg-3 -->
                         </div><!-- End .row -->

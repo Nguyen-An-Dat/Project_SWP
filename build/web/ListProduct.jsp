@@ -69,6 +69,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-9">
+                                
                                 <div class="toolbox">
                                     <div class="toolbox-left">
                                         <div class="toolbox-info">
@@ -83,9 +84,10 @@
                                         <div class="toolbox-sort">
                                             <label for="sortby">Sort by:</label>
                                             <div class="select-custom">
+                                                
                                                 <form name="sortBy" action="search" method="get">
-                                                    <select name="sortby" id="sortby" onchange="javascript:document.sortBy.submit()" class="form-control">
-                                                        <option value="500000000" selected="selected">0-500M</option>
+                                                    <select valu name="sortby" id="sortby" onchange="javascript:document.sortBy.submit()" class="form-control">
+                                                        <option value="500000000">0-500M</option>
                                                         <option value="1000000000" >500M-1B</option>
                                                         <option value="1500000000" >1B-1,5B</option>
                                                         <option value="2000000000" >1,5B-2B</option>
@@ -115,10 +117,12 @@
                                                                 </div><!-- End .product-action-vertical -->
                                                             </c:if>
                                                         </c:if>
-
-                                                        <div class="product-action">
+                                                            <c:if test="${sessionScope.roleAccount==3}">
+                                                                <div class="product-action">
                                                             <a href="#" onclick="addToCart(${p.productId});" class="btn-product btn-cart"><span>add to List</span></a>
                                                         </div><!-- End .product-action -->
+                                                            </c:if>
+                                                        
                                                     </figure><!-- End .product-media -->
 
                                                     <div class="product-body">
@@ -153,98 +157,66 @@
 
                                     <div class="widget widget-collapsible">
                                         <h3 class="widget-title">
-                                            <a data-toggle="collapse" href="#widget-2" role="button" aria-expanded="true" aria-controls="widget-2">
-                                                Size
-                                            </a>
+                                            Category
+<!--                                            <a for="filter" data-toggle="collapse" href="#widget-2" role="button" aria-expanded="true" aria-controls="widget-2">
+                                                
+                                            </a>-->
                                         </h3><!-- End .widget-title -->
-
-                                        <div class="collapse show" id="widget-2">
-                                            <div class="widget-body">
+                                        
+                                    <form name="filter" action="filter" method="get">  
+                                        <select name="filter123" id="filter123" onchange="javascript:document.filter.submit()" class="form-control">
+                                            <option value="1">Hatchback</option>
+                                            <option value="2">Sedan</option>
+                                            <option value="3">CUV-Crossover Utility Vehicle</option>
+                                            <option value="4">SUV_Sport Utility Vehicle</option>
+                                            <option value="5">Limousine</option>
+                                            
+                                        </select>
+                                    </form>
+                                        <!--<div class="collapse show" id="widget-2">-->
+<!--                                            <div class="widget-body">
                                                 <div class="filter-items">
-                                                    <div class="filter-item">
-                                                        <div class="custom-control custom-checkbox">
+                                                    <div class="filter-item" >
+                                                        <div class="custom-control custom-checkbox" value="1">
                                                             <input type="checkbox" class="custom-control-input" id="size-1">
                                                             <label class="custom-control-label" for="size-1">Hatchback</label>
-                                                        </div><!-- End .custom-checkbox -->
-                                                    </div><!-- End .filter-item -->
+                                                        </div> End .custom-checkbox 
+                                                    </div> End .filter-item 
 
-                                                    <div class="filter-item">
-                                                        <div class="custom-control custom-checkbox">
+                                                    <div class="filter-item" >
+                                                        <div class="custom-control custom-checkbox" value="2">
                                                             <input type="checkbox" class="custom-control-input" id="size-2">
                                                             <label class="custom-control-label" for="size-2">Sedan</label>
-                                                        </div><!-- End .custom-checkbox -->
-                                                    </div><!-- End .filter-item -->
+                                                        </div> End .custom-checkbox 
+                                                    </div> End .filter-item 
 
-                                                    <div class="filter-item">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" checked id="size-3">
+                                                    <div class="filter-item" >
+                                                        <div class="custom-control custom-checkbox" value="3">
+                                                            <input type="checkbox" class="custom-control-input"  id="size-3">
                                                             <label class="custom-control-label" for="size-3">CUV-Crossover Utility Vehicle</label>
-                                                        </div><!-- End .custom-checkbox -->
-                                                    </div><!-- End .filter-item -->
+                                                        </div> End .custom-checkbox 
+                                                    </div> End .filter-item 
 
-                                                    <div class="filter-item">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" checked id="size-4">
+                                                    <div class="filter-item" >
+                                                        <div class="custom-control custom-checkbox" value="4">
+                                                            <input type="checkbox" class="custom-control-input"  id="size-4">
                                                             <label class="custom-control-label" for="size-4">SUV-Sport Utility Vehicle</label>
-                                                        </div><!-- End .custom-checkbox -->
-                                                    </div><!-- End .filter-item -->
+                                                        </div> End .custom-checkbox 
+                                                    </div> End .filter-item 
 
-                                                    <div class="filter-item">
-                                                        <div class="custom-control custom-checkbox">
+                                                    <div class="filter-item" >
+                                                        <div class="custom-control custom-checkbox" value="5">
                                                             <input type="checkbox" class="custom-control-input" id="size-5">
                                                             <label class="custom-control-label" for="size-5">Limousine</label>
-                                                        </div><!-- End .custom-checkbox -->
-                                                    </div><!-- End .filter-item -->
-                                                </div><!-- End .filter-items -->
-                                            </div><!-- End .widget-body -->
-                                        </div><!-- End .collapse -->
+                                                        </div> End .custom-checkbox 
+                                                    </div> End .filter-item 
+                                                </div> End .filter-items 
+                                            </div> End .widget-body -->
+                                        <!--</div> End .collapse -->
+                                      <!--</form>-->
                                     </div><!-- End .widget -->
 
-<!--                                    <div class="widget widget-collapsible">
-                                        <h3 class="widget-title">
-                                            <a data-toggle="collapse" href="#widget-3" role="button" aria-expanded="true" aria-controls="widget-3">
-                                                Color
-                                            </a>
-                                        </h3> End .widget-title 
 
-                                        <div class="collapse show" id="widget-3">
-                                            <div class="widget-body">
-                                                <div class="filter-colors">
-                                                    <a href="#" style="background: #b87145;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" style="background: #f0c04a;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" style="background: #333333;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" class="selected" style="background: #cc3333;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" style="background: #3399cc;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" style="background: #669933;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" style="background: #f2719c;"><span class="sr-only">Color Name</span></a>
-                                                    <a href="#" style="background: #ebebeb;"><span class="sr-only">Color Name</span></a>
-                                                </div> End .filter-colors 
-                                            </div> End .widget-body 
-                                        </div> End .collapse 
-                                    </div> End .widget -->
-
-
-
-<!--                                    <div class="widget widget-collapsible">
-                                        <h3 class="widget-title">
-                                            <a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5">
-                                                Price
-                                            </a>
-                                        </h3> End .widget-title 
-
-                                        <div class="collapse show" id="widget-5">
-                                            <div class="widget-body">
-                                                <div class="filter-price">
-                                                    <div class="filter-price-text">
-                                                        Price Range:
-                                                        <span id="filter-price-range"></span>
-                                                    </div> End .filter-price-text 
-
-                                                    <div id="price-slider"></div> End #price-slider 
-                                                </div> End .filter-price 
-                                            </div> End .widget-body 
-                                        </div> End .collapse 
-                                    </div> End .widget -->
                                 </div><!-- End .sidebar sidebar-shop -->
                             </aside><!-- End .col-lg-3 -->
                         </div><!-- End .row -->

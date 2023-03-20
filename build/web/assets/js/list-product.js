@@ -8,3 +8,15 @@ var role = '<%= session.getAttribute("roleAccount") %>';
 if (role === '1') {
     alert('123');
 }
+
+function filterList() {
+    var id  = document.getElementById('filter123').value;
+    $.ajax({
+        type: "GET",
+        url: "filter",
+        data: {id: id},
+        success: function (responseText) {
+            location.reload();
+        }
+    });
+}

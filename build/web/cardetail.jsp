@@ -119,10 +119,12 @@
                                             <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
                                         </div> End .product-details-quantity 
                                     </div> End .details-filter-row -->
-
-                                    <div class="product-details-action">
-                                        <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>Add to list</span></a>
-                                    </div><!-- End .product-details-action -->
+<c:if test="${sessionScope.account != null && sessionScope.roleAccount == 3}">
+    <div class="product-details-action">
+        <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>Add to list</span></a>
+    </div><!-- End .product-details-action -->
+</c:if>    
+                                    
 
                                     <div class="product-details-footer">
                                         <div class="social-icons social-icons-sm">

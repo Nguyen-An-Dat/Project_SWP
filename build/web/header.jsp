@@ -9,37 +9,67 @@
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <header class="header">
-    
-    <div class="header-top">
-        <div class="container">
-            <div class="header-right">
-                <ul class="top-menu">
-                    <li>
-                        <a href="#">Links</a>
-                        <ul>
-                            <li><a href="tel:#"><i class="icon-phone"></i>Call: 0383376171</a></li>
-                            <li><a href="home">Contact Us</a></li>
 
-                            <%
-                                String username = (String)session.getAttribute("account");
-                                if(username==null)  {
-                            %>            
-                            <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login-Register</a></li>
-                                <%
-                                    } else {
-                                %>
-                            <li><a href="home" class="icon-user"></i>${sessionScope.account}</a>
-                            <li><a href="changepass.jsp" class="icon-user">Change Password</a></li>
-                            <li><a href="logout">Logout</a></li>
-                                <%
-                                    }
-                                %>
-                        </ul>
-                    </li>
-                </ul><!-- End .top-menu -->
-            </div><!-- End .header-right -->
-        </div><!-- End .container -->
-    </div><!-- End .header-top -->
+    <c:if test="${sessionScope.account == null}">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-right">
+                    <ul class="top-menu">
+                        <li>
+                            <!--                        <a href="#">Links</a>-->
+                            <ul>
+                                <li><a href="tel:#"><i class="icon-phone"></i>Call: 0383376171</a></li>
+                                <li><a href="home">Contact Us</a></li>
+                                <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login-Register</a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- End .top-menu -->
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div> 
+    </c:if>
+
+    <c:if test="${sessionScope.account != null && sessionScope.roleAccount == 1}">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-right">
+                    <ul class="top-menu">
+                        <li>
+                            <!--                        <a href="#">Links</a>-->
+                            <ul>
+                                <li><a href="tel:#"><i class="icon-phone"></i>Call: 0383376171</a></li>
+                                <li><a href="home">Contact Us</a></li>
+                                <li><a href="<c:url value="/listcustomer"/>" class="icon-user"></i>List Customer</a>
+                                <li><a href="changepass.jsp" >Change Password</a></li>
+                                <li><a href="logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- End .top-menu -->
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div> 
+    </c:if>
+
+    <c:if test="${sessionScope.account != null && sessionScope.roleAccount == 3}">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-right">
+                    <ul class="top-menu">
+                        <li>
+                            <!--                        <a href="#">Links</a>-->
+                            <ul>
+                                <li><a href="tel:#"><i class="icon-phone"></i>Call: 0383376171</a></li>
+                                <li><a href="home">Contact Us</a></li>
+
+                                <li><a href="changepass.jsp" >Change Password</a></li>
+                                <li><a href="logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- End .top-menu -->
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div> 
+    </c:if>
 
     <div class="header-middle sticky-header">
         <div class="container">
@@ -133,35 +163,34 @@
                         </div><!-- End .header-search-wrapper -->
                     </form>
                 </div><!-- End .header-search -->
-
-                <div class="dropdown cart-dropdown">
+                <c:if test="${sessionScope.roleAccount == 3}">
+                    <div class="dropdown cart-dropdown">
                     <a href="/viewcart.jsp" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
                         <span class="cart-count">${sessionScope.countCar}</span>
                     </a>
-
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-cart-products">
                             <c:forEach items="${sessionScope.cart}" var="p">
                                 <div class="product">
-                                <div class="product-cart-details">
-                                    <h4 class="product-title">
-                                        <a href="product.html">${p.productName}</a>
-                                    </h4>
+                                    <div class="product-cart-details">
+                                        <h4 class="product-title">
+                                            <a href="product.html">${p.productName}</a>
+                                        </h4>
 
-                                    <span class="cart-product-info">
-                                        <span class="cart-product-qty">${p.quality}</span>
-                                           x <fmt:formatNumber type = "number"  maxFractionDigits = "3" value = "${p.productPrice}" /> VND
-                                    </span>
-                                </div><!-- End .product-cart-details -->
+                                        <span class="cart-product-info">
+                                            <span class="cart-product-qty">${p.quality}</span>
+                                            x <fmt:formatNumber type = "number"  maxFractionDigits = "3" value = "${p.productPrice}" /> VND
+                                        </span>
+                                    </div><!-- End .product-cart-details -->
 
-                                <figure class="product-image-container">
-                                    <a href="product.html" class="product-image">
-                                        <img src="${p.image}" alt="product">
-                                    </a>
-                                </figure>
+                                    <figure class="product-image-container">
+                                        <a href="product.html" class="product-image">
+                                            <img src="${p.image}" alt="product">
+                                        </a>
+                                    </figure>
                                     <a href="#" onclick="removeProductCart(${p.productId})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                            </div><!-- End .product -->
+                                </div><!-- End .product -->
                             </c:forEach>
 
                         </div><!-- End .cart-product -->
@@ -179,6 +208,8 @@
                         </div><!-- End .dropdown-cart-total -->
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .cart-dropdown -->
+                </c:if>
+                
             </div><!-- End .header-right -->
         </div><!-- End .container -->
     </div><!-- End .header-middle -->
