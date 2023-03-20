@@ -12,15 +12,17 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import model.Product;
+import model.ProductCart;
 
 /**
  *
- * @author BaHung
+ * @author bogia
  */
-@WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
-public class SearchServlet extends HttpServlet {
+@WebServlet(name = "FilterServlet", urlPatterns = {"/filter"})
+public class FilterServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +41,10 @@ public class SearchServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SearchServlet</title>");
+            out.println("<title>Servlet FilterServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SearchServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet FilterServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,29 +62,17 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nameSearch = request.getParameter("nameCar");
-        String selectValue = request.getParameter("sortby");
-        String filter = request.getParameter("filter123");
-
+        
+            String id = request.getParameter("filter123");
         List<Product> listProduct = null;
         DAOProduct dp = new DAOProduct();
-        if (nameSearch != null) {
-            listProduct = dp.Search(nameSearch);
-        }
-        if (selectValue != null) {
-            listProduct = dp.Sort(selectValue);
-        }
-        if (filter != null) {
-            listProduct = dp.Filter(filter);
-        }
-
+        listProduct = dp.Filter(id);
         int countP = dp.countProduct();
         request.setAttribute("listProduct", listProduct);
         request.setAttribute("countP", countP);
-
-        request.setAttribute("selected", selectValue);
-        request.setAttribute("filtered", filter);
         request.getRequestDispatcher("ListProduct.jsp").forward(request, response);
+       
+        
     }
 
     /**

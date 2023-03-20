@@ -188,4 +188,30 @@ public class DAOProduct extends DBContext {
         }
         return list;
     }
+    public List<Product> Filter(String selectValue1) {
+        List<Product> list = new ArrayList<>();
+        String sql = "  Select * from products where categoryID = ?";
+        try {
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.setString(1, selectValue1);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                Product c = new Product(rs.getInt("productId"),
+                        rs.getInt("productPrice"),
+                        rs.getInt("categoryId"),
+                        rs.getString("productName"),
+                        rs.getString("productColor"),
+                        rs.getString("productDescription"),
+                        rs.getString("Image"),
+                        rs.getString("Image2"),
+                        rs.getString("Image3"),
+                        rs.getString("Image4")
+                );
+                list.add(c);
+            }
+        } catch (SQLException e) {
+        }
+        return list;
+    }
+    
 }

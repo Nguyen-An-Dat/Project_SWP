@@ -37,3 +37,15 @@ function updateCart(id) {
     });
 }
 
+
+function filterList() {
+    var id  = document.getElementById('filter123').value;
+    $.ajax({
+        type: "GET",
+        url: "filter",
+        data: {id: id},
+        success: function (responseText) {
+            location.reload();
+        }
+    });
+}

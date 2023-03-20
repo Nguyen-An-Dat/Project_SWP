@@ -49,6 +49,27 @@
             </div><!-- End .container -->
         </div> 
     </c:if>
+    
+    <c:if test="${sessionScope.account != null && sessionScope.roleAccount == 2}">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-right">
+                    <ul class="top-menu">
+                        <li>
+                            <!--                        <a href="#">Links</a>-->
+                            <ul>
+                                <li><a href="tel:#"><i class="icon-phone"></i>Call: 0383376171</a></li>
+                                <li><a href="home">Contact Us</a></li>
+                                <li><a href="<c:url value="/listcustomer"/>" class="icon-user"></i>List Customer</a>
+                                <li><a href="changepass.jsp" >Change Password</a></li>
+                                <li><a href="logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- End .top-menu -->
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div> 
+    </c:if>
 
     <c:if test="${sessionScope.account != null && sessionScope.roleAccount == 3}">
         <div class="header-top">

@@ -124,9 +124,17 @@
                                         </div> End .product-details-quantity 
                                     </div> End .details-filter-row -->
 
+<c:if test="${sessionScope.account != null && sessionScope.roleAccount == 3}">
+    <div class="product-details-action">
+        <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>Add to list</span></a>
+    </div><!-- End .product-details-action -->
+</c:if>    
+
+
                                     <div class="product-details-action">
                                         <a href="#" onclick="addToCart(${product.productId});" class="btn-product btn-cart"><span>add to cart</span></a>
                                     </div><!-- End .product-details-action -->
+
 
                                     <div class="product-details-footer">
                                         <div class="social-icons social-icons-sm">
